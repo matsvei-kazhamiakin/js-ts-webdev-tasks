@@ -11,20 +11,99 @@
         "slug": "ui-kit",
         "title": "UI KIT"
       },
-
       {
         "slug": "framework",
-        "title": "Framework"
+        "title": "FRAMEWORK"
       },
-
       {
         "slug": "landing-page",
-        "title": "Landing Page"
+        "title": "LANDING PAGE"
       },
-
       {
         "slug": "generator",
-        "title": "Generator"
+        "title": "GENERATOR"
+      }
+    ]
+  },
+  {
+    "heading": "Slides",
+    "description": "We have created a new product that will help designers create websites for their startups.",
+    "image": {
+      "name": "card-02.jpg",
+      "alt": "A desk with keyboard and pink bottle"
+    },
+    "tags": [
+      {
+        "slug": "ui-kit",
+        "title": "UI KIT"
+      },
+      {
+        "slug": "colorful",
+        "title": "COLORFUL"
+      },
+      {
+        "slug": "landing-page",
+        "title": "LANDING PAGE"
+      },
+      {
+        "slug": "slide",
+        "title": "SLIDE"
+      }
+    ]
+  },
+  {
+    "heading": "Flat UI Pro",
+    "description": "Components and blocks are fixed to the common and popular 12 Grid system.",
+    "image": {
+      "name": "card-03.jpg",
+      "alt": "Pink building with stairs"
+    },
+    "tags": [
+      {
+        "slug": "ui-kit",
+        "title": "UI KIT"
+      },
+      {
+        "slug": "ux-kit",
+        "title": "UX KIT"
+      },
+      {
+        "slug": "design",
+        "title": "DESIGN"
+      },
+      {
+        "slug": "flat",
+        "title": "FLAT"
+      },
+      {
+        "slug": "web",
+        "title": "WEB"
+      }
+    ]
+  },
+  {
+    "heading": "Slides",
+    "description": "We have created a new product that will help designers create websites for their startups.",
+    "image": {
+      "name": "card-04.jpg",
+      "alt": "Desk with keyboard and notebook"
+    },
+    "tags": [
+      {
+        "slug": "ui-kit",
+        "title": "UI KIT"
+      },
+      {
+        "slug": "colorful",
+        "title": "COLORFUL"
+      },
+      {
+        "slug": "landing-page",
+        "title": "LANDING PAGE"
+      },
+      {
+        "slug": "slide",
+        "title": "SLIDE"
       }
     ]
   }
