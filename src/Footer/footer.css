@@ -1,0 +1,52 @@
+.footer { 
+    background: url('./assets/images/footer-background.png');
+    width: 1740px;
+    height: 788px;
+    background-size: cover; 
+    background-position: center;
+    fill: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    margin: 100px auto 0px auto;
+    padding: 0;
+}
+
+.footer-space {
+    height: 497px; 
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-phone-content {
+    color: #FE772D;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 58px;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 17px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footer-social-item {
+    cursor: pointer;
+}
+
+.footer-social-item img {
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-item:hover img {
+    transform: scale(1.1); 
+}

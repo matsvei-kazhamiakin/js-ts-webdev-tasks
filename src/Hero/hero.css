@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background-color: #000015;
+    color: #fff;
+}
+
+.header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'Jolly Lodger';
+}
+
+.header-nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    margin-left: 0px;
+    font-family: 'Rubik';
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #FE772D;
+}
+
+.header-button {
+    margin-left: 20px;
+    font-family: 'Rubik';
+}
+
+.button-reservation {
+    background-color: #FE772D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-reservation:hover {
+    background-color: #ff8b47;
+    color: #ffffff;
+}
+
+.hero {
+    text-align: center;
+    padding: 4px 0px 200px 0px;
+    position: relative; 
+    background-image: url('./assets/images/hero-background.png');
+    box-shadow: 100px 5px 300px 130px rgba(0,0,0,0.9) inset;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+    
+.party {
+    margin-top: 40px;
+}
+    
+.party-date-text {
+    font-family: 'Rubik';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+    
+.calendar {
+    margin-right: 6.33px;
+    margin-top: 2px;
+}
+    
+.party-title {
+    font-family: 'Jolly Lodger';
+    font-size: 3.625rem;
+    font-weight: 500;
+    color: #FE772D;
+    margin: 10px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.arrow-down {
+    position: relative; 
+    margin-top: 664px;
+    align-content: center;
+
+}

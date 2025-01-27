@@ -1,0 +1,31 @@
+{
+    "en": {
+      "switchLang": "Switch Lang",
+      "partyTime": "Party Time!",
+      "home": "Home",
+      "gallery": "Gallery",
+      "aboutParty": "About Party",
+      "reservation": "Reservation",
+      "contacts": "Contacts",
+      "reservationDate": "31 October 2023",
+      "halloweenPartyTitle": "It's Halloween Party O'Clock!",
+      "galleryTitle": "Halloween Memories",
+      "phoneText": "Phone Reservation? (+1) 987 46 52",
+      "languageToggle": "عرب EN"
+      
+    },
+    "ar": {
+      "switchLang": "تبديل اللغة",
+      "partyTime": "پارتی تایم",
+      "home": "الصفحة الرئيسية",
+      "gallery": "المعرض",
+      "aboutParty": "حول الحفلة",
+      "reservation": "الحجز",
+      "contacts": "الاتصال",
+      "reservationDate": "31 أكتوبر 2023",
+      "halloweenPartyTitle": "حان وقت حفلة الهالوين!",
+      "galleryTitle": "ذكريات الهالوين",
+      "phoneText": "رزرو تلفنی؟  987 46 52  (+1)  ",
+      "languageToggle": "عرب EN"
+    }
+  }
