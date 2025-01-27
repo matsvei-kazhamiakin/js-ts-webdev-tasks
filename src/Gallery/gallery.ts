@@ -4,49 +4,40 @@ interface ILocaleData {
   galleryTitle: string;
 }
 
+// Функция для рендеринга секции галереи
 export function renderGallerySection(
   container: HTMLElement,
   locale: ILocaleData,
-  isRTL: boolean
+  isRTL: boolean    
 ) {
-  const gallerySection = document.createElement("section");
-  gallerySection.className = "gallery-section";
-  gallerySection.setAttribute("dir", isRTL ? "rtl" : "ltr");
+  const section = document.createElement('section');
+  section.className = 'gallery';
+  if (isRTL) section.setAttribute('dir', 'rtl');
 
-  const titleEl = document.createElement("h2");
-  titleEl.className = "gallery-title";
-  titleEl.textContent = locale.galleryTitle;
+  const title = document.createElement('h2');
+  title.textContent = locale.galleryTitle;
+  section.appendChild(title);
 
-  const galleryWrapper = document.createElement("div");
-  galleryWrapper.className = "gallery-wrapper";
+  const grid = document.createElement('div');
+  grid.className = 'gallery-grid';
 
   const images = [
-    "/assets/images/img1.png",
-    "/assets/images/img2.png",
-    "/assets/images/img3.png",
-    "/assets/images/img4.png",
-    "/assets/images/img5.png",
-    "/assets/images/img6.png",
-    "/assets/images/img7.png",
-    "/assets/images/img8.png",
-    "/assets/images/img9.png",
-    "/assets/images/img10.png",
+    'img1.png', 'img2.png', 'img3.png', 'img4.png', 'img5.png',
+    'img6.png', 'img7.png', 'img8.png', 'img9.png', 'img10.png'
   ];
 
-  images.forEach(imgSrc => {
-    const imgEl = document.createElement("img");
-    Object.assign(imgEl, {
-      src: imgSrc,
-      alt: "Halloween memory",
-      className: "gallery-img"
-    });
+  images.forEach(img => {
+    const imgWrapper = document.createElement('div');
+    imgWrapper.className = 'gallery-item';
 
-    const div = document.createElement("div");
-    div.className = "gallery-item";
-    div.appendChild(imgEl);
-    galleryWrapper.appendChild(div);
+    const imgEl = document.createElement('img');
+    imgEl.src = `/assets/images/${img}`;
+    imgEl.alt = 'Halloween memory';
+
+    imgWrapper.appendChild(imgEl);
+    grid.appendChild(imgWrapper);
   });
 
-  gallerySection.append(titleEl, galleryWrapper);
-  container.appendChild(gallerySection);
+  section.appendChild(grid);
+  container.appendChild(section);
 }

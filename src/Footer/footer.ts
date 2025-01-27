@@ -6,69 +6,57 @@ interface ILocaleData {
 
 interface ISocialLink {
   href: string;
-  src: string;
+  icon: string;
   alt: string;
 }
 
 const SOCIAL_LINKS: ISocialLink[] = [
-  { href: "https://www.behance.net", src: "assets/images/behance.png", alt: "Behance" },
-  { href: "https://www.figma.com", src: "assets/images/figma.png", alt: "Figma" },
-  { href: "https://www.linkedin.com", src: "assets/images/linkedin.png", alt: "Linkedin" },
-  { href: "https://www.instagram.com", src: "assets/images/instagram.png", alt: "Instagram" },
-  { href: "https://www.youtube.com", src: "assets/images/youtube.png", alt: "Youtube" },
+  { href: "https://www.behance.net", icon: "assets/images/behance.png", alt: "Behance" },
+  { href: "https://www.figma.com", icon: "assets/images/figma.png", alt: "Figma" },
+  { href: "https://www.linkedin.com", icon: "assets/images/linkedin.png", alt: "Linkedin" },
+  { href: "https://www.instagram.com", icon: "assets/images/instagram.png", alt: "Instagram" },
+  { href: "https://www.youtube.com", icon: "assets/images/youtube.png", alt: "Youtube" },
 ];
-
-const createSocialElement = (social: ISocialLink): HTMLElement => {
-  const listItem = document.createElement('div');
-  listItem.classList.add('footer-social-item');
-  
-  const link = document.createElement('a');
-  link.href = social.href;
-  link.setAttribute('aria-label', social.alt);
-  
-  const img = document.createElement('img');
-  img.src = social.src;
-  img.alt = social.alt;
-  
-  link.appendChild(img);
-  listItem.appendChild(link);
-  
-  return listItem;
-};
 
 export function renderFooterSection(
   container: HTMLElement,
   locale: ILocaleData,
   isRTL: boolean
 ) {
-  const templateEl = document.getElementById("footer-template") as HTMLTemplateElement;
-  if (!templateEl) {
-    console.error("Footer template not found!");
+  const template = document.getElementById('footer-template') as HTMLTemplateElement;
+  if (!template) {
+    console.error('Footer template not found!');
     return;
   }
 
-  const clone = templateEl.content.cloneNode(true) as DocumentFragment;
-  const elements = {
-    phoneContent: clone.querySelector(".footer-phone-content"),
-    footerRoot: clone.querySelector(".footer"),
-    socialList: clone.querySelector<HTMLUListElement>('.footer-social-list')
-  };
-
-  if (elements.phoneContent) {
-    elements.phoneContent.textContent = locale.phoneText;
+  const footerNode = template.content.cloneNode(true) as DocumentFragment;
+  const footer = footerNode.querySelector('.footer') as HTMLElement;
+  
+  if (isRTL) {
+    footer.setAttribute('dir', 'rtl');
   }
 
-  if (elements.footerRoot) {
-    elements.footerRoot.setAttribute("dir", isRTL ? "rtl" : "ltr");
+  const phoneEl = footer.querySelector('.footer-phone');
+  if (phoneEl) {
+    phoneEl.textContent = locale.phoneText;
   }
 
-  if (elements.socialList) {
-    elements.socialList.setAttribute("dir", "ltr");
-    SOCIAL_LINKS.forEach(social => {
-      const listItem = createSocialElement(social);
-      elements.socialList?.appendChild(listItem);
+  const socialList = footer.querySelector('.social-list');
+  if (socialList) {
+    SOCIAL_LINKS.forEach(link => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      const img = document.createElement('img');
+      
+      a.href = link.href;
+      img.src = link.icon;
+      img.alt = link.alt;
+      
+      a.appendChild(img);
+      li.appendChild(a);
+      socialList.appendChild(li);
     });
   }
 
-  container.appendChild(clone);
+  container.appendChild(footerNode);
 }

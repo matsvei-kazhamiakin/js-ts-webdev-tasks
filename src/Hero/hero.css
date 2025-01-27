@@ -12,6 +12,67 @@ body {
     align-items: center;
 }
 
+.nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'Jolly Lodger';
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Rubik';
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #FE772D;
+}
+
+.reservation-btn {
+    background-color: #FE772D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Rubik';
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservation-btn:hover {
+    background-color: #ff8b47;
+}
+
 .header-container {
     width: 100%;
     max-width: 1200px;
@@ -29,12 +90,6 @@ body {
 
 .header-nav {
     display: flex;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
 }
 
 .nav-item {
@@ -57,63 +112,81 @@ body {
     font-family: 'Rubik';
 }
 
-.button-reservation {
-    background-color: #FE772D;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
 .button-reservation:hover {
     background-color: #ff8b47;
     color: #ffffff;
 }
 
+#changeLang {
+    color: #ffffff;
+    font-family: 'Rubik';
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#changeLang:hover {
+    color: #FE772D;
+}
+
 .hero {
     text-align: center;
     padding: 4px 0px 200px 0px;
-    position: relative; 
-    background-image: url('./assets/images/hero-background.png');
+    position: relative;
+    background-image: url('/assets/images/hero-background.png');
     box-shadow: 100px 5px 300px 130px rgba(0,0,0,0.9) inset;
     border: none;
     background-position: center;
     background-repeat: no-repeat;
     height: 700px;
 }
-    
-.party {
+
+.hero-content {
     margin-top: 40px;
 }
-    
-.party-date-text {
-    font-family: 'Rubik';
+
+.date-badge {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Rubik';
     font-size: 1.5rem;
     color: #FFFFFF;
     text-transform: uppercase;
 }
-    
-.calendar {
+
+.date-badge img {
     margin-right: 6.33px;
     margin-top: 2px;
 }
-    
-.party-title {
+
+.hero-content h1 {
     font-family: 'Jolly Lodger';
     font-size: 3.625rem;
     font-weight: 500;
     color: #FE772D;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
     text-transform: uppercase;
 }
 
 .arrow-down {
-    position: relative; 
+    position: relative;
     margin-top: 664px;
     align-content: center;
+}
 
+[dir="rtl"] .nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-list {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-right {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .date-badge img {
+    margin-right: 0;
+    margin-left: 6.33px;
 }

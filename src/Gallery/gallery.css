@@ -1,10 +1,10 @@
-.gallery-section {
+.gallery {
     text-align: center;
     padding: 100px 15.5px;
-    box-shadow: 100px 100px 100px 0px rgba(0,0,0,0.9) inset;
+    background: #000015;
 }
 
-.gallery-title {
+.gallery h2 {
     font-family: 'Jolly Lodger';
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -15,7 +15,7 @@
     color: #FE772D;
 }
 
-.gallery-wrapper {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 48px;
@@ -29,6 +29,7 @@
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    aspect-ratio: 1;
 }
 
 .gallery-item:hover {
@@ -36,8 +37,13 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.gallery-img {
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s;
+}
+
+[dir="rtl"] .gallery-grid {
+    direction: rtl;
 }
